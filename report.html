@@ -1,0 +1,86 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <script src="js/jquery-2.2.2.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+</head>
+<body>
+<div id="report-home" style="padding:50px;">
+    <form id="repform" method="post">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                   <label>Select report</label>
+                </div>
+                <div class="col-sm-2">
+                    <select id="reptype" class="form-control">
+                        <option value="" selected>Select report</option>
+                        <option value="TRR">TRR</option>
+                        <option value="STL">STL</option>
+                        <option value="DRR">DRR</option>
+                    </select>
+                </div>
+                <div class="col-sm-1">
+                    <label>Format</label>
+                </div>
+                <div class="col-sm-1" id="format-value">
+                </div>
+                <div class="col-sm-1">
+                    <label>Type</label>
+                </div>
+                <div class="col-sm-1" id="type-value">
+                </div>
+            </div>
+            <!--End of Row-->
+            <div class="row" style="padding-top: 20px;">
+                <script type="text/javascript">
+                    $(function () {
+                        $('.datepicker').datepicker();
+                    });
+                </script>
+                <div class="col-sm-2">
+                    <label>Start Date</label>
+                </div>
+                <div class="col-sm-2">
+                    <input class="datepicker" type="text" id="startdate">
+                </div>
+                <div class="col-sm-2">
+                    <label>End Date</label>
+                </div>
+                <div class="col-sm-2">
+                    <input class="datepicker" type="text" id="enddate">
+                </div>
+            </div>
+            <!--End of Row-->
+            <div class="row">
+                <div class="col-sm-12" style="text-align: center;padding-top: 10px;">
+                    <input type="submit" class="btn btn-primary" id="reqreport" value="Request Report">
+                </div>
+            </div>
+        </div>
+    </form>
+    <form>
+        <div id="result">
+            <h1><p>Reports fetched</p></h1>
+        </div>
+    </form>
+    <script type="text/javascript">
+        $(function () {
+            
+        });
+
+        $(function () {
+            $('#reqreport').click(function () {
+                $('#result').show();
+            });
+        });
+
+    </script>
+</div>
+
+<script src="js/bootstrap.js"/>
+
+
+</body>
+</html>
